@@ -11,24 +11,21 @@ Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de
 Escreva um programa que peça o tipo e a quantidade de carne comprada pelo usuário e gere um cupom fiscal,
 contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar.
 """
-
-# Programa da Promoção do Hipermercado Tabajara
-
 print("""
 ==============================================
-      Promoção de Carnes - Hipermercado Tabajara
+ Promoção de Carnes - Hipermercado Tabajara
 ==============================================
 File Duplo   - R$ 4,90/kg até 5kg | R$ 5,80/kg acima de 5kg
 Alcatra      - R$ 5,90/kg até 5kg | R$ 6,80/kg acima de 5kg
 Picanha      - R$ 6,90/kg até 5kg | R$ 7,80/kg acima de 5kg
 """)
 
-# Entrada do tipo de carne e quantidade
+# Entrada do tipo de carne e quantidade e cartão
 tipo = input("Digite o tipo da carne (File Duplo, Alcatra, Picanha): ").strip().lower()
 quantidade = float(input("Digite a quantidade de carne (em kg): "))
 usou_cartao = input("Pagamento com Cartão Tabajara? (s/n): ").strip().lower() == 's'
 
-# Define o preco por quilo com base no tipo e quantidade
+#preco por quilo com base no tipo e quantidade
 if tipo == "file duplo":
     preco_kg = 4.90 if quantidade <= 5 else 5.80
     nome_carne = "File Duplo"
@@ -42,12 +39,11 @@ else:
     print("Tipo de carne inválido.")
     exit()
 
-# Calcula valores
+# Calculo
 preco_total = preco_kg * quantidade
 desconto = preco_total * 0.05 if usou_cartao else 0
 valor_final = preco_total - desconto
 
-# Exibe o cupom fiscal
 print("\
 ========== CUPOM FISCAL ==========")
 print(f"Tipo de carne: {nome_carne}")

@@ -14,7 +14,7 @@ entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será cl
 #perguntas sobre o crime
 
 print("------------------------------------------------"
-"\n  oque ouve na 22situação?"
+"\n  oque ouve na situação?"
 "\n\n- Telefonou para a vítima [1]"
 "\n- Esteve no local do crime [2]"
 "\n- Mora perto da vítima [3]"

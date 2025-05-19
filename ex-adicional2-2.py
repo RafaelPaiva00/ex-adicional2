@@ -27,26 +27,31 @@ O algoritmo deve mostrar na tela:
 
 """
 
-
-nota1 = float(input("digite a sua primeira nota aqui: "))
-nota2 = float(input("digite a sua segunda nota aqui: "))
+nota1 = float(input("Digite a primeira nota: "))
+nota2 = float(input("Digite a segunda nota: "))
 
 media = (nota1 + nota2) / 2
 
+if 9.0 <= media <= 10.0:
+    conceito = "A"
+elif 7.5 <= media < 9.0:
+    conceito = "B"
+elif 6.0 <= media < 7.5:
+    conceito = "C"
+elif 4.0 <= media < 6.0:
+    conceito = "D"
+else:
+    conceito = "E"
 
-print((f"\n nota 1: {nota1:}\n nota 2: {nota2:}"))
+if conceito in ["A", "B", "C"]:
+    status = "APROVADO!"
+else:
+    status = "REPROVADO!"
 
-print((f"\n media: {media}"))
-
-conceitos = [
-    (9.0, 10.0, "A"),
-    (7.5, 9.0, "B"),
-    (6.0, 7.5, "C"),
-    (4.0, 6.0, "D"),
-    (0.0, 4.0, "E")
-]
-
-conceito = conceitos[media]
-
-print(conceito)
-
+print("\n=========== RESULTADO ===========")
+print(f"Nota 1: {nota1:.1f}")
+print(f"Nota 2: {nota2:.1f}")
+print(f"Média: {media:.1f}")
+print(f"Conceito: {conceito}")
+print(f"Situação: {status}")
+print("=================================")
